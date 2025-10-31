@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на юбилей школы - 95 лет</title>
+    <meta name="description" content="Приглашение на юбилейное мероприятие, посвященное 95-летию образования Никольской начальной школы">
+    <meta name="keywords" content="юбилей, школа, приглашение, Никольцы, 95 лет">
+    
+    <!-- Open Graph мета-теги -->
+    <meta property="og:title" content="Приглашение на юбилей школы - 95 лет">
+    <meta property="og:description" content="Приглашение на юбилейное мероприятие, посвященное 95-летию образования Никольской начальной школы">
+    <meta property="og:image" content="school-building.jpg">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- EmailJS для отправки форм -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="invitation-container">
+        <!-- Главный экран -->
+        <div class="main-screen" id="mainScreen">
+            <div class="background-image">
+                <img src="school-building.jpg" alt="Здание школы" class="school-image">
+                <div class="image-overlay"></div>
+            </div>
+            <div class="tap-hint">
+                <p>Нажмите на экран, чтобы открыть</p>
+                <div class="scroll-hint">
+                    <p>Листайте приглашение</p>
+                    <div class="scroll-icon">↓</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Контент приглашения -->
+        <div class="invitation-content" id="invitationContent">
+            <!-- Заголовок -->
+            <div class="invitation-header">
+                <h1>Приглашаем Вас на юбилейное мероприятие, посвященное 95-летию образования Никольской начальной школы.</h1>
+                <p class="subtitle">Мы будем очень рады видеть вас на наш юбилей!</p>
+            </div>
+
+            <!-- Время и дата -->
+            <div class="event-details">
+                <div class="time-section">
+                    <h2>Сбор гостей</h2>
+                    <div class="time">13:00</div>
+                </div>
+                <div class="gathering-section">
+                    <h2>Торжественная часть</h2>
+                    <div class="time">14:00</div>
+                </div>
+            </div>
+
+            <!-- Таймер обратного отсчета -->
+            <div class="countdown-timer">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">26</div>
+                    <div class="countdown-label">дней</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">0</div>
+                    <div class="countdown-label">часов</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">32</div>
+                    <div class="countdown-label">минут</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">19</div>
+                    <div class="countdown-label">секунд</div>
+                </div>
+            </div>
+
+            <!-- Место проведения -->
+            <div class="venue-section">
+                <h2>Административно-культурный центр "Кюндюл им. Елены Ивановны Бубякиной"</h2>
+                <p class="address">ул. Протопопова, д. 14, корпус 1</p>
+                <p class="location">с. Никольцы</p>
+            </div>
+
+            <!-- Подарки -->
+            <div class="gifts-section">
+                <h2>Мы будем признательны, если вы принесете свои теплые слова и пожелания, а подарки в конверте.</h2>
+                <p>Это будет прекрасным вкладом для развития нашей школы.</p>
+            </div>
+
+            <!-- Форма RSVP -->
+            <div class="rsvp-section">
+                <h2>Чтобы мы могли правильно посчитать количество гостей, просим заполнить анкету до 15 ноября 2025г..</h2>
+                
+                <form class="rsvp-form" id="rsvpForm">
+                    <div class="form-group">
+                        <label for="surname">Фамилия</label>
+                        <input type="text" id="surname" name="surname" placeholder="Иванов" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" placeholder="Иван" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Подтвердите ваше присутствие</label>
+                        <p class="form-subtitle">Выберите один из двух вариантов</p>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="yes" required>
+                                <span class="radio-custom"></span>
+                                Обязательно приду
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="no" required>
+                                <span class="radio-custom"></span>
+                                Не смогу присутствовать
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Отправить ответ</button>
+                </form>
+            </div>
+
+            <!-- Контакты -->
+            <div class="contacts-section">
+                <h2>Если у вас возникнут какие-либо вопросы, вы можете связаться с нами:</h2>
+                <div class="contacts">
+                    <div class="contact-item">
+                        <h3>Директор ОУ</h3>
+                        <p><a href="tel:+79644292190">+7 (964) 429-21-90</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Организатор</h3>
+                        <p><a href="tel:+79640763740">+7 (964) 076-37-40</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>Дизайн и разработка от студии<br>веб приглашений Михайлов Артем</p>
+                <p class="copyright">© 2025 Все права защищены</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script-static.js"></script>
+</body>
+</html>
